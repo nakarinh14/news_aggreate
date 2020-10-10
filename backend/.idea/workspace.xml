@@ -20,6 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b131ce27-2708-457b-9789-b553cf5883a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/db/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/passport-config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/news.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/../source/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/sanook.py" beforeDir="false" afterPath="$PROJECT_DIR$/../source/sanook.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/thairath.py" beforeDir="false" afterPath="$PROJECT_DIR$/../source/thairath.py" afterDir="false" />
@@ -52,7 +63,13 @@
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,6 +81,16 @@
       <updated>1601890020647</updated>
       <workItem from="1601890022679" duration="894000" />
       <workItem from="1601903365410" duration="232000" />
+      <workItem from="1602097338194" duration="732000" />
+      <workItem from="1602134607284" duration="1652000" />
+      <workItem from="1602183246600" duration="773000" />
+      <workItem from="1602185597891" duration="80000" />
+      <workItem from="1602268573764" duration="1720000" />
+      <workItem from="1602271331340" duration="653000" />
+      <workItem from="1602272114459" duration="629000" />
+      <workItem from="1602311204045" duration="2616000" />
+      <workItem from="1602315234539" duration="3000" />
+      <workItem from="1602319778931" duration="5433000" />
     </task>
     <servers />
   </component>
@@ -87,21 +114,38 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="384" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800/-2560.-640.2560.1440@0.0.1280.800" timestamp="1601890659133" />
-    <state width="1259" height="212" key="GridCell.Tab.0.bottom" timestamp="1601891061800">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="2539" height="287" key="GridCell.Tab.0.bottom" timestamp="1602325318933">
+      <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800/-2560.-617.2560.1417@0.0.1280.800" timestamp="1601891061800" />
-    <state width="1259" height="212" key="GridCell.Tab.0.center" timestamp="1601891061799">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="2539" height="287" key="GridCell.Tab.0.bottom/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325318933" />
+    <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1602272058028" />
+    <state width="2539" height="287" key="GridCell.Tab.0.center" timestamp="1602325318931">
+      <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800/-2560.-617.2560.1417@0.0.1280.800" timestamp="1601891061799" />
-    <state width="1259" height="212" key="GridCell.Tab.0.left" timestamp="1601891061797">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="2539" height="287" key="GridCell.Tab.0.center/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325318931" />
+    <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1602272058027" />
+    <state width="2539" height="287" key="GridCell.Tab.0.left" timestamp="1602325318930">
+      <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800/-2560.-617.2560.1417@0.0.1280.800" timestamp="1601891061797" />
-    <state width="1259" height="212" key="GridCell.Tab.0.right" timestamp="1601891061799">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="2539" height="287" key="GridCell.Tab.0.left/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325318930" />
+    <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1602272058026" />
+    <state width="2539" height="287" key="GridCell.Tab.0.right" timestamp="1602325318932">
+      <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800/-2560.-617.2560.1417@0.0.1280.800" timestamp="1601891061799" />
+    <state width="2539" height="287" key="GridCell.Tab.0.right/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325318932" />
+    <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1602272058028" />
+    <state x="-1771" y="-281" key="SettingsEditor" timestamp="1602312645199">
+      <screen x="-2560" y="-640" width="2560" height="1440" />
+    </state>
+    <state x="-1771" y="-281" key="SettingsEditor/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602312645199" />
+    <state x="-1771" y="-281" key="SettingsEditor/0.23.1280.777/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602312264257" />
+    <state x="-1615" y="-309" width="670" height="676" key="search.everywhere.popup" timestamp="1602183266767">
+      <screen x="-2560" y="-640" width="2560" height="1440" />
+    </state>
+    <state x="-1615" y="-309" width="670" height="676" key="search.everywhere.popup/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602183266767" />
   </component>
 </project>
