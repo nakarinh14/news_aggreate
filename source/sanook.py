@@ -20,13 +20,13 @@ class Sanook(Scraper):
             }
 
         parsed_elements = tree.xpath("//s:url/s:loc | //image:image/image:loc | //news:news/news:title", namespaces=NS)
-        insert_query = """ INSERT INTO news_source (url, img, category, date, title, description, publisher) VALUES (%s, %s, %s, now(), %s, %s, %s)"""
+        insert_query = """ INSERT INTO news_source (url, img, category, date, title, publisher) VALUES (%s, %s, %s, now(), %s, %s)"""
         news_data = []
         for i in range(int(len(parsed_elements)/3)):
-            news_url, img_url, title = parsed_elements[(i*4)].text, parsed_elements[(i*4)+1].text, parsed_elements[(i*4)+2].text
-            url_split = news_url.split("/")
-            category = url_split[4] if url_split[3] == "news" else url_split[3]
+            news_url, title, img_url = parsed_elements[(i*3)].text, parsed_elements[(i*3)+1].text, parsed_elements[(i*3)+2].text
+            category = ''
             news_data.append((news_url, img_url, category, title, self.publisher))
+        # print(news_data)
         return insert_query, news_data    
 
 if __name__ == "__main__":

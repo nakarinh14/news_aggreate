@@ -1,6 +1,6 @@
 import psycopg2
 from psycopg2 import IntegrityError
-
+import psycopg2.extras
 
 # Connect to your postgres DB
 class DB:
@@ -22,7 +22,7 @@ class DB:
             self.conn.commit()
 
         except IntegrityError:
-            print("Duplicated key met")
+            print("Duplicated URL met")
     
     # def insert_all(self, query, data):
 

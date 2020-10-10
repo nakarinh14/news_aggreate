@@ -19,18 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b131ce27-2708-457b-9789-b553cf5883a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/passport-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/news.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="b131ce27-2708-457b-9789-b553cf5883a2" name="Default Changelist" comment="Update workspace.xmlv">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/../source/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/sanook.py" beforeDir="false" afterPath="$PROJECT_DIR$/../source/sanook.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../source/thairath.py" beforeDir="false" afterPath="$PROJECT_DIR$/../source/thairath.py" afterDir="false" />
@@ -90,8 +80,79 @@
       <workItem from="1602272114459" duration="629000" />
       <workItem from="1602311204045" duration="2616000" />
       <workItem from="1602315234539" duration="3000" />
-      <workItem from="1602319778931" duration="5433000" />
+      <workItem from="1602319778931" duration="5923000" />
     </task>
+    <task id="LOCAL-00001" summary="Update DB Query">
+      <created>1602325664162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325664162</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update package.json">
+      <created>1602325685552</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325685552</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update package.json">
+      <created>1602325689453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325689453</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add Passport.JS and Configuration">
+      <created>1602325716393</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325716393</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add API endpoint for news source">
+      <created>1602325740088</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325740088</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add API endpoint for user registration.">
+      <created>1602325771450</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325771450</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add API endpoint for user authentication">
+      <created>1602325800177</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325800177</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update app.js and .env">
+      <created>1602325809889</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325809889</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update workspace.xmlv">
+      <created>1602325826859</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325826859</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update workspace.xmlv">
+      <created>1602325900152</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602325900152</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,40 +170,59 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update DB Query" />
+    <MESSAGE value="Update package.json" />
+    <MESSAGE value="Add Passport.JS and Configuration" />
+    <MESSAGE value="Add API endpoint for news source" />
+    <MESSAGE value="Add API endpoint for user registration." />
+    <MESSAGE value="Add API endpoint for user authentication" />
+    <MESSAGE value="Update app.js and .env" />
+    <MESSAGE value="Update workspace.xmlv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xmlv" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="384" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601890659133">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="384" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800/-2560.-640.2560.1440@0.0.1280.800" timestamp="1601890659133" />
-    <state width="2539" height="287" key="GridCell.Tab.0.bottom" timestamp="1602325318933">
+    <state x="-2360" y="-440" width="2360" height="1240" key="DiffContextDialog" timestamp="1602325946140">
+      <screen x="-2560" y="-640" width="2560" height="1440" />
+    </state>
+    <state x="-2360" y="-440" width="2360" height="1240" key="DiffContextDialog/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325946140" />
+    <state width="2539" height="422" key="GridCell.Tab.0.bottom" timestamp="1602326001525">
       <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800/-2560.-617.2560.1417@0.0.1280.800" timestamp="1601891061800" />
-    <state width="2539" height="287" key="GridCell.Tab.0.bottom/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325318933" />
+    <state width="2539" height="422" key="GridCell.Tab.0.bottom/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602326001525" />
     <state width="1259" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1602272058028" />
-    <state width="2539" height="287" key="GridCell.Tab.0.center" timestamp="1602325318931">
+    <state width="2539" height="422" key="GridCell.Tab.0.center" timestamp="1602326001523">
       <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800/-2560.-617.2560.1417@0.0.1280.800" timestamp="1601891061799" />
-    <state width="2539" height="287" key="GridCell.Tab.0.center/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325318931" />
+    <state width="2539" height="422" key="GridCell.Tab.0.center/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602326001523" />
     <state width="1259" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1602272058027" />
-    <state width="2539" height="287" key="GridCell.Tab.0.left" timestamp="1602325318930">
+    <state width="2539" height="422" key="GridCell.Tab.0.left" timestamp="1602326001521">
       <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800/-2560.-617.2560.1417@0.0.1280.800" timestamp="1601891061797" />
-    <state width="2539" height="287" key="GridCell.Tab.0.left/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325318930" />
+    <state width="2539" height="422" key="GridCell.Tab.0.left/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602326001521" />
     <state width="1259" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1602272058026" />
-    <state width="2539" height="287" key="GridCell.Tab.0.right" timestamp="1602325318932">
+    <state width="2539" height="422" key="GridCell.Tab.0.right" timestamp="1602326001524">
       <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800/-2560.-617.2560.1417@0.0.1280.800" timestamp="1601891061799" />
-    <state width="2539" height="287" key="GridCell.Tab.0.right/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325318932" />
+    <state width="2539" height="422" key="GridCell.Tab.0.right/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602326001524" />
     <state width="1259" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1602272058028" />
     <state x="-1771" y="-281" key="SettingsEditor" timestamp="1602312645199">
       <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
     <state x="-1771" y="-281" key="SettingsEditor/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602312645199" />
     <state x="-1771" y="-281" key="SettingsEditor/0.23.1280.777/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602312264257" />
+    <state x="-1452" y="0" key="VCS.ChangelistChooser" timestamp="1602325747362">
+      <screen x="-2560" y="-640" width="2560" height="1440" />
+    </state>
+    <state x="-1452" y="0" key="VCS.ChangelistChooser/0.0.1280.800/-2560.-640.2560.1440@-2560.-640.2560.1440" timestamp="1602325747362" />
     <state x="-1615" y="-309" width="670" height="676" key="search.everywhere.popup" timestamp="1602183266767">
       <screen x="-2560" y="-640" width="2560" height="1440" />
     </state>
