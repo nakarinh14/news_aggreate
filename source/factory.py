@@ -1,12 +1,14 @@
 from database import DB
 from thairath import Thairath
 from sanook import Sanook
+from posttoday import Posttoday
 
 class ScraperFactory:
     
     builders = {
         'thairath': Thairath,
         'sanook': Sanook,
+        'posttoday': Posttoday
     }
 
     db = DB()
