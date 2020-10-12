@@ -1,4 +1,3 @@
-from database import DB
 from thairath import Thairath
 from sanook import Sanook
 from posttoday import Posttoday
@@ -11,18 +10,13 @@ class ScraperFactory:
         'posttoday': Posttoday
     }
 
-    db = DB()
-
     def build(self, publisher:str):
-        scraper = self.builders[publisher]()
-        return scraper.execute()
+        print("Building: " + publisher)
+        self.builders[publisher]().insertDB()
 
     def buildAll(self):
         for builder in self.builders:
-            insert_query, news_data = self.build(builder)
-            self.db.insert_batch(insert_query, news_data)
-
-
+            self.build(builder)
 
 if __name__ == "__main__":
     factory = ScraperFactory()
