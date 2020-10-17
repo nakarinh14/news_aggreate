@@ -21,7 +21,7 @@ module.exports = {
 
     findNewsOffsetLimit: queryPool(
         "SELECT * FROM news_source n WHERE n.publisher != ALL($1)" +
-        "ORDER BY date desc LIMIT $2 OFFSET $3"),
+        "ORDER BY date desc, url LIMIT $2 OFFSET $3"),
 
     findUserSettings: queryPool("SELECT * FROM user_news_settings usn WHERE usn.username = $1"),
 
