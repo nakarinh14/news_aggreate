@@ -1,14 +1,11 @@
-import requests
-from lxml import etree
-from scraper import Scraper
+from scraper import XmlScraper
 import datetime as dt
 from news_utils import strip_text
 
-class Posttoday(Scraper):
+class Posttoday(XmlScraper):
     
     def __init__(self):
-        Scraper.__init__(
-            self, 
+        super().__init__( 
             [
                 "http://www.posttoday.com/rss/src/politics.xml",
                 "http://www.posttoday.com/rss/src/world.xml",
@@ -19,13 +16,10 @@ class Posttoday(Scraper):
         )
     
     def execute(self):
-        insert_query = """ INSERT INTO news_source (url, category, date, title, description, publisher) VALUES (%s, %s, %s, %s, %s, %s) ON CONFLICT DO NOTHING"""
         news_data = []
         for rss_url in self.url:
-            res = requests.get(rss_url)
-            tree = etree.XML(res.content)
             category = str(rss_url.split('/')[-1][:-4])
-            parsed_elements = tree.xpath("//item/title | //item/link | //item/description | //item/pubDate")
+            parsed_elements = self.lxml_xpath("//item/title | //item/link | //item/description | //item/pubDate", url=rss_url)
             latest_url = self.getLatestUrl("SELECT url FROM news_source WHERE publisher=%s AND category=%s ORDER BY date DESC LIMIT 1;", (self.publisher, category))
 
             for i in range(int(len(parsed_elements)/4)):
@@ -35,12 +29,13 @@ class Posttoday(Scraper):
                 time = strip_text(parsed_elements[(i*4)+3].text)
                 timestamp = dt.datetime.strptime(time, "%a, %d %b %Y %H:%M:%S %z")
                 if latest_url is not None and news_url == latest_url:
-                    print("break posttoday...")
+                    print(f"Duplicate found... Stopping {self.publisher}")
                     break
-                
                 news_data.append((news_url, category, timestamp, title, caption, self.publisher))
+
+        insert_query = """ INSERT INTO news_source (url, category, date, title, description, publisher) VALUES (%s, %s, %s, %s, %s, %s)"""
         return insert_query, news_data
 
 if __name__ == "__main__":
     scraper = Posttoday()
-    scraper.execute()
+    print(scraper.execute())

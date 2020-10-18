@@ -1,28 +1,20 @@
-import requests
-from lxml import etree
-from scraper import Scraper
+from scraper import XmlScraper
 import datetime as dt
 
-
-class Sanook(Scraper):
+class Sanook(XmlScraper):
     def __init__(self):
-        Scraper.__init__(
-            self, 
+        super().__init__(
             "https://www.sanook.com/news/sitemap/today/",
             "sanook"
         )
         
     def execute(self):
-        res = requests.get(self.url)
-        tree = etree.XML(res.content)
         NS = {
             's': "http://www.sitemaps.org/schemas/sitemap/0.9", 
             'image':"http://www.google.com/schemas/sitemap-image/1.1", 
             'news':"http://www.google.com/schemas/sitemap-news/0.9"
             }
-
-        parsed_elements = tree.xpath("//s:url/s:loc | //news:publication_date | //news:news/news:title | //image:image/image:loc", namespaces=NS)
-        insert_query = """ INSERT INTO news_source (url, img, category, date, title, publisher) VALUES (%s, %s, %s, %s, %s, %s)"""
+        parsed_elements = self.lxml_xpath("//s:url/s:loc | //news:publication_date | //news:news/news:title | //image:image/image:loc", namespaces=NS)
         news_data = []
         latest_url = self.getLatestUrl()
         for i in range(int(len(parsed_elements)/4)):
@@ -30,12 +22,13 @@ class Sanook(Scraper):
             category = ''
             timestamp = dt.datetime.strptime(time, "%Y-%m-%dT%H:%M:%S%z")
             if latest_url is not None and news_url == latest_url:
-                print('break sanook..')
+                print(f"Duplicate found... Stopping {self.publisher}")
                 break
             news_data.append((news_url, img_url, category, timestamp, title, self.publisher))
-        
+            
+        insert_query = """ INSERT INTO news_source (url, img, category, date, title, publisher) VALUES (%s, %s, %s, %s, %s, %s)"""
         return insert_query, news_data    
 
 if __name__ == "__main__":
     scraper = Sanook()
-    scraper.execute()
+    print(scraper.execute())

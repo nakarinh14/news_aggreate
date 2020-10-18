@@ -11,7 +11,7 @@ class ScraperFactory:
     }
 
     def build(self, publisher:str):
-        print("Building: " + publisher)
+        print("Building scraper: " + publisher)
         self.builders[publisher]().insertDB()
 
     def buildAll(self):
