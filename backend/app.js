@@ -12,7 +12,8 @@ const authRouter = require('./routes/auth');
 const newsRouter = require('./routes/news');
 const app = express();
 
-app.use(cors())
+app.disable('etag');
+app.use(cors({credentials: true, origin: process.env.WEBSERVER}))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
