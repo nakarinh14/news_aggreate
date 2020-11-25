@@ -18,11 +18,11 @@ module.exports = passport => {
     ));
 
     passport.serializeUser((user, done) => {
-        done(null, user.username);
+        done(null, user.id);
     })
 
-    passport.deserializeUser((username, done) => {
-        db.findUser([username], (err, user) => {
+    passport.deserializeUser((user_id, done) => {
+        db.findUserById([user_id], (err, user) => {
             done(err, user.rows[0])
         })
     })
