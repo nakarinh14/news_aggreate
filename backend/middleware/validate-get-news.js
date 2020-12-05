@@ -4,7 +4,7 @@ const isStringArray = (arr) => Array.isArray(arr) && arr.every(x => typeof x ===
 const isInt = (x) => validator.isInt(x)
 
 const validateQuery = (req, res, next) => {
-    const cond = isInt(req.query.limit) && isInt(req.query.page) && isStringArray(req.query.publisher)
+    const cond = isInt(req.query.limit) && isInt(req.query.page)
     if(cond){
         return next()
     }
