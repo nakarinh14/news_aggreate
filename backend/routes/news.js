@@ -51,16 +51,13 @@ router.get('/history', authGuard, (req, res) => {
 })
 
 router.post('/history', authGuard, (req, res) => {
+        res.status(200).send()
         db.findUrlById([req.body.news_id], (err, result) => {
             if (err) console.log(err);
-            else if (req.isAuthenticated()) {
-                console.log(req.user.id)
+            else {
                 db.addHistory([req.user.id, req.body.news_id, req.body.timestamp], (err) => {
                     if (err) console.log(err);
-                    else res.json(result.rows[0])
                 })
-            } else {
-                res.json(result.rows[0]);
             }
         })
     }
