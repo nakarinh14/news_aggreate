@@ -1,9 +1,10 @@
 const express = require('express');
 const db = require("../db/db");
 const authGuard = require("../middleware/nav-guard")
+const validateQuery = require("../middleware/validate-get-news");
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/',  validateQuery, (req, res) => {
     const limit = req.query.limit;
     const page = req.query.page;
 
