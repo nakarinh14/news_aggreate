@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors')
 const logger = require('morgan');
 const passport = require('passport')
-const session = require('express-session');
+const session = require('cookie-session');
 require('./passport-config')(passport);
 
 const usersRouter = require('./routes/users');
