@@ -28,7 +28,7 @@ module.exports = {
 
     findNewsOffsetLimitAuth: queryPool(
         "SELECT n.*, b.bookmark_id " +
-        "FROM news_source n LEFT JOIN bookmarks b ON n.id=b.news_id AND b.user_id=$4" +
+        "FROM news_source n LEFT JOIN bookmarks b ON n.id=b.news_id AND b.user_id=$4 " +
         "WHERE n.publisher = ANY($1) ORDER BY timestamp DESC LIMIT $2 OFFSET $3"
     ),
     findUserSettings: queryPool("SELECT * FROM user_news_settings usn WHERE usn.username = $1"),
