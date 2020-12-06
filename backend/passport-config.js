@@ -1,9 +1,9 @@
 const bcrypt = require('bcrypt')
-const { Strategy } = require('passport-local');
+const LocalStrategy = require('passport-local').Strategy;
 const db = require('./db/db');
 
 module.exports = passport => {
-    passport.use('local', new Strategy((username, password, done) => {
+    passport.use('local', new LocalStrategy((username, password, done) => {
             db.findUser([username], (err, user) => {
                 if (err) { return done(err); }
                 if (!user.rows.length) {

@@ -28,6 +28,7 @@ app.use(session({
     proxy: true, // add this line
     cookie: {
         maxAge: 30 * 24 * 60 * 60 * 1000,
+        sameSite: "none"
     } // 30 days
 }))
 
