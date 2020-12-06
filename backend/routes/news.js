@@ -4,7 +4,7 @@ const authGuard = require("../middleware/nav-guard")
 const validateQuery = require("../middleware/validate-get-news");
 const router = express.Router();
 
-router.get('/',  validateQuery, (req, res) => {
+router.get('/', validateQuery, (req, res) => {
     const limit = req.query.limit;
     const page = req.query.page;
 
@@ -30,16 +30,16 @@ router.get('/bookmark', authGuard, (req, res) => {
 })
 
 router.post('/bookmark/add', authGuard, (req, res) => {
+    res.status(200).send()
     db.addBookedNews([req.user.id, req.body.news_id], (err) => {
         if (err) console.log(err);
-        else res.json({"status": "success"});
     })
 })
 
 router.post('/bookmark/remove', authGuard, (req, res) => {
-    db.removeBookedNews([req.user.id, req.body.news_id], (err, result) => {
+    res.status(200).send()
+    db.removeBookedNews([req.user.id, req.body.news_id], (err) => {
         if (err) console.log(err);
-        else res.json(result.rows)
     })
 })
 
@@ -51,15 +51,15 @@ router.get('/history', authGuard, (req, res) => {
 })
 
 router.post('/history', authGuard, (req, res) => {
-        res.status(200).send()
-        db.findUrlById([req.body.news_id], (err, result) => {
-            if (err) console.log(err);
-            else {
-                db.addHistory([req.user.id, req.body.news_id, req.body.timestamp], (err) => {
-                    if (err) console.log(err);
-                })
-            }
-        })
+    res.status(200).send()
+    db.findUrlById([req.body.news_id], (err) => {
+        if (err) console.log(err);
+        else {
+            db.addHistory([req.user.id, req.body.news_id, req.body.timestamp], (err) => {
+                if (err) console.log(err);
+            })
+        }
+    })
     }
 )
 module.exports = router;
