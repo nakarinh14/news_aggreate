@@ -18,7 +18,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.enable('trust proxy'); // add this line
+
+app.set('trust proxy', 1)
 app.use(session({
     store: new (require('connect-pg-simple')(session))(),
     secret: process.env.SECRET,
