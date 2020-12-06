@@ -5,6 +5,7 @@ const validateQuery = require("../middleware/validate-get-news");
 const router = express.Router();
 
 router.get('/', validateQuery, (req, res) => {
+    console.log(req.session)
     const limit = req.query.limit;
     const page = req.query.page;
 
