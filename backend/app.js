@@ -18,13 +18,16 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.enable('trust proxy'); // add this line
 app.use(session({
     store: new (require('connect-pg-simple')(session))(),
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
+    proxy: true, // add this line
     cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 } // 30 days
 }))
+
 app.use(passport.initialize());
 app.use(passport.session());
 

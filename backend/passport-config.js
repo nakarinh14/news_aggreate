@@ -23,6 +23,7 @@ module.exports = passport => {
 
     passport.deserializeUser((user_id, done) => {
         db.findUserById([user_id], (err, user) => {
+            console.log(err)
             done(err, user.rows[0])
         })
     })
